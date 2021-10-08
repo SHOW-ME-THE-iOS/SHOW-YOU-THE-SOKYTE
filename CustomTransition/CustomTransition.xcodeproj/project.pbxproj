@@ -17,6 +17,7 @@
 		920186D3270F5F1C00DAD0F2 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920186D2270F5F1C00DAD0F2 /* DataManager.swift */; };
 		920186D5270F603A00DAD0F2 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920186D4270F603A00DAD0F2 /* CollectionViewCell.swift */; };
 		920186D7270F60C700DAD0F2 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920186D6270F60C700DAD0F2 /* Animator.swift */; };
+		9201871E271059CD00DAD0F2 /* PresentationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9201871D271059CD00DAD0F2 /* PresentationType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		920186D2270F5F1C00DAD0F2 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		920186D4270F603A00DAD0F2 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		920186D6270F60C700DAD0F2 /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		9201871D271059CD00DAD0F2 /* PresentationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,17 +68,58 @@
 			children = (
 				920186BC270F579B00DAD0F2 /* AppDelegate.swift */,
 				920186BE270F579B00DAD0F2 /* SceneDelegate.swift */,
-				920186C0270F579B00DAD0F2 /* FirstVC.swift */,
+				920186CA270F579C00DAD0F2 /* Info.plist */,
+				9201871F271059E700DAD0F2 /* Global */,
+				9201871927103FB200DAD0F2 /* Sources */,
+				9201871827103FA500DAD0F2 /* Resources */,
+			);
+			path = CustomTransition;
+			sourceTree = "<group>";
+		};
+		9201871827103FA500DAD0F2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				920186C2270F579B00DAD0F2 /* Main.storyboard */,
 				920186C5270F579C00DAD0F2 /* Assets.xcassets */,
 				920186C7270F579C00DAD0F2 /* LaunchScreen.storyboard */,
-				920186CA270F579C00DAD0F2 /* Info.plist */,
-				920186D0270F5CC500DAD0F2 /* SecondVC.swift */,
-				920186D2270F5F1C00DAD0F2 /* DataManager.swift */,
-				920186D4270F603A00DAD0F2 /* CollectionViewCell.swift */,
-				920186D6270F60C700DAD0F2 /* Animator.swift */,
 			);
-			path = CustomTransition;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9201871927103FB200DAD0F2 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				9201872027105A1A00DAD0F2 /* Cells */,
+				9201871A27103FD700DAD0F2 /* VCs */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		9201871A27103FD700DAD0F2 /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				920186C0270F579B00DAD0F2 /* FirstVC.swift */,
+				920186D0270F5CC500DAD0F2 /* SecondVC.swift */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		9201871F271059E700DAD0F2 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				920186D2270F5F1C00DAD0F2 /* DataManager.swift */,
+				920186D6270F60C700DAD0F2 /* Animator.swift */,
+				9201871D271059CD00DAD0F2 /* PresentationType.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		9201872027105A1A00DAD0F2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				920186D4270F603A00DAD0F2 /* CollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +200,7 @@
 				920186D3270F5F1C00DAD0F2 /* DataManager.swift in Sources */,
 				920186D7270F60C700DAD0F2 /* Animator.swift in Sources */,
 				920186BF270F579B00DAD0F2 /* SceneDelegate.swift in Sources */,
+				9201871E271059CD00DAD0F2 /* PresentationType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

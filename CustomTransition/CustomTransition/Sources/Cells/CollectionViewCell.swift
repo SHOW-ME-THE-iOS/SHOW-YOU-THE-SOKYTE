@@ -7,6 +7,11 @@
 
 import UIKit
 
+struct CellData {
+    let image: UIImage
+    let title: String
+}
+
 final class CollectionViewCell: UICollectionViewCell {
 
     @IBOutlet private(set) var locationImageView: UIImageView!
@@ -38,8 +43,3 @@ final class CollectionViewCell: UICollectionViewCell {
     }
 }
 
-struct CellData {
-
-    let image: UIImage
-    let title: String
-}

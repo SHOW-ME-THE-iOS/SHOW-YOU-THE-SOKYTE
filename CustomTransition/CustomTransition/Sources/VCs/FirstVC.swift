@@ -47,7 +47,6 @@ class FirstVC: UIViewController {
 }
 
 extension FirstVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return DataManager.data.count
     }

@@ -11,7 +11,6 @@ import UIKit
 final class Animator: NSObject, UIViewControllerAnimatedTransitioning {
 
     // 9
-
     static let duration: TimeInterval = 1.25
 
     private let type: PresentationType
@@ -182,13 +181,4 @@ final class Animator: NSObject, UIViewControllerAnimatedTransitioning {
     }
 }
 
-// 14
-enum PresentationType {
 
-    case present
-    case dismiss
-
-    var isPresenting: Bool {
-        return self == .present
-    }
-}
