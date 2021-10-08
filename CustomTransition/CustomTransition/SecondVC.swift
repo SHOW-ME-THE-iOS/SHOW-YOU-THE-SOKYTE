@@ -18,11 +18,13 @@ class SecondVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let cross = #imageLiteral(resourceName: "background").withRenderingMode(.alwaysTemplate)
+        let cross = #imageLiteral(resourceName: "cross").withRenderingMode(.alwaysTemplate)
         closeButton.setImage(cross, for: .normal)
         closeButton.tintColor = .white
 
         locationImageView.image = data.image
+        locationImageView.contentMode = .scaleAspectFill
+        
         locationLabel.text = data.title
     }
 

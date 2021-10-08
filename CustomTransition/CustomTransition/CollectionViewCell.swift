@@ -33,6 +33,7 @@ final class CollectionViewCell: UICollectionViewCell {
 
     func configure(with cellData: CellData) {
         locationImageView.image = cellData.image
+        locationImageView.contentMode = .scaleAspectFill
         locationLabel.text = cellData.title
     }
 }
