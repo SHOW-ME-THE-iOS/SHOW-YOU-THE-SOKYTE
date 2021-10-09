@@ -13,6 +13,8 @@
 		920186EC270F657800DAD0F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 920186EA270F657800DAD0F2 /* Main.storyboard */; };
 		920186EE270F657900DAD0F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 920186ED270F657900DAD0F2 /* Assets.xcassets */; };
 		920186F1270F657900DAD0F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 920186EF270F657900DAD0F2 /* LaunchScreen.storyboard */; };
+		920187602711F23500DAD0F2 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9201875F2711F23500DAD0F2 /* StorageManager.swift */; };
+		920187622711F29400DAD0F2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920187612711F29400DAD0F2 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		920186ED270F657900DAD0F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		920186F0270F657900DAD0F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		920186F2270F657900DAD0F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9201875F2711F23500DAD0F2 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		920187612711F29400DAD0F2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				920186ED270F657900DAD0F2 /* Assets.xcassets */,
 				920186EF270F657900DAD0F2 /* LaunchScreen.storyboard */,
 				920186F2270F657900DAD0F2 /* Info.plist */,
+				9201875F2711F23500DAD0F2 /* StorageManager.swift */,
+				920187612711F29400DAD0F2 /* User.swift */,
 			);
 			path = "KeyChain-Demo";
 			sourceTree = "<group>";
@@ -141,6 +147,8 @@
 				920186E9270F657800DAD0F2 /* ViewController.swift in Sources */,
 				920186E5270F657800DAD0F2 /* AppDelegate.swift in Sources */,
 				920186E7270F657800DAD0F2 /* SceneDelegate.swift in Sources */,
+				920187622711F29400DAD0F2 /* User.swift in Sources */,
+				920187602711F23500DAD0F2 /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

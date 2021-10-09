@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import Security
 
-struct Credentials {
+struct UserInfo {
     var userName: String
     var password: String
 }
@@ -18,20 +19,49 @@ enum KeychainError: Error {
 }
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var idTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var statusLabel: UILabel!
+    
+    private var hasUserInfo = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        try? addItemsOnKeyChain()
+        
+        idTextField.delegate = self
+        passwordTextField.delegate = self
+        
         readItemsOnKeyChain()
-//        deleteItemOnKeyChain(key: "soyeon")
+        if hasUserInfo {
+            statusLabel.text = "꽤나 자주 보네"
+        } else {
+            statusLabel.text = "우리 초면이야"
+        }
     }
     
-    //MARK: 키체인에 넣을 아이템 생성
+    @IBAction func touchUpDelete(_ sender: Any) {
+        deleteItemOnKeyChain(key: "soyeon")
+    }
+}
+
+extension ViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if !hasUserInfo {
+            try? addItemsOnKeyChain()
+        }
+    }
+}
+
+// MARK: - Key Chain  Methods
+
+extension ViewController {
+    // MARK: 키체인에 넣을 아이템 생성
     private func addItemsOnKeyChain() throws {
-        //간단하게 네임이 younsu이고, 패스워드가 ask123인 유저의 패스워드를 keychain 형식으로 저장.
-        let credentials = Credentials(userName: "soyeon", password: "ask12345")
-        let account = credentials.userName
-        let password = credentials.password.data(using: String.Encoding.utf8)!
+        let userInfo = UserInfo(userName: idTextField.text ?? "", password: passwordTextField.text ?? "")
+        let account = userInfo.userName
+        let password = userInfo.password.data(using: String.Encoding.utf8)!
         let query: [CFString: Any] = [kSecClass: kSecClassGenericPassword,
                                     kSecAttrAccount: account,
                                     kSecValueData: password]
@@ -46,26 +76,28 @@ class ViewController: UIViewController {
         }
     }
     
+    
     //MARK: 해당 계정으로 패스워드를 키체인에서 가져오기
     private func readItemsOnKeyChain() {
         let account = "soyeon"
         let query: [CFString: Any] = [kSecClass: kSecClassGenericPassword,
-                                    kSecAttrAccount: account,
-                                    kSecReturnAttributes: true,
-                                    kSecReturnData: true]
+                                kSecAttrAccount: account,
+                           kSecReturnAttributes: true,
+                                 kSecReturnData: true]
         var item: CFTypeRef?
         if SecItemCopyMatching(query as CFDictionary, &item) != errSecSuccess {
             print("read failed")
+            hasUserInfo = false
             return
         }
         guard let existingItem = item as? [String: Any] else { return }
         guard let data = existingItem["v_Data"] as? Data else { return }
         guard let password = String(data: data, encoding: .utf8) else { return }
-        
+        hasUserInfo = true
         print(password)
     }
     
-    //MARK: 같은 키값이면 업데이트하기
+    // MARK: 같은 키 값이면 업데이트하기
     private func updateItemOnKeyChain(value: Any, key: Any) {
         let previousQuery: [CFString: Any] = [kSecClass: kSecClassGenericPassword,
                                               kSecAttrAccount: key]
@@ -78,7 +110,7 @@ class ViewController: UIViewController {
         }
     }
     
-    //MARK: 해당 string으로 이루어진 키데이터 쌍 삭제하기
+    // MARK: 해당 string으로 이루어진 키데이터 쌍 삭제하기
     private func deleteItemOnKeyChain(key: String) {
         let deleteQuery: [CFString: Any] = [kSecClass: kSecClassGenericPassword,
                                             kSecAttrAccount: key]
