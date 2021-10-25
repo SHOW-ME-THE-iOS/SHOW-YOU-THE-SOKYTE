@@ -14,6 +14,7 @@ protocol MainViewControllerDelegate {
 class MainViewController: UIViewController {
 
     var delegate: MainViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

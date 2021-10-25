@@ -16,7 +16,6 @@
 		926574C22726A27F00E4BB69 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926574C12726A27F00E4BB69 /* MainViewController.swift */; };
 		926574C42726A39C00E4BB69 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926574C32726A39C00E4BB69 /* LoginCoordinator.swift */; };
 		926574C62726A3B300E4BB69 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926574C52726A3B300E4BB69 /* LoginViewController.swift */; };
-		926574C82726A3DE00E4BB69 /* Cooridinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926574C72726A3DE00E4BB69 /* Cooridinate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +30,6 @@
 		926574C12726A27F00E4BB69 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		926574C32726A39C00E4BB69 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		926574C52726A3B300E4BB69 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		926574C72726A3DE00E4BB69 /* Cooridinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cooridinate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,10 +64,9 @@
 			children = (
 				926574A427269F5D00E4BB69 /* AppDelegate.swift */,
 				926574A627269F5D00E4BB69 /* SceneDelegate.swift */,
+				926574BA2726A05A00E4BB69 /* AppCoordinator.swift */,
 				926574B227269F5E00E4BB69 /* Info.plist */,
 				926574BE2726A14D00E4BB69 /* Resouces */,
-				926574BA2726A05A00E4BB69 /* AppCoordinator.swift */,
-				926574C72726A3DE00E4BB69 /* Cooridinate.swift */,
 				926574BD2726A13700E4BB69 /* Login */,
 				926574BC2726A12A00E4BB69 /* Main */,
 			);
@@ -178,7 +175,6 @@
 				926574C22726A27F00E4BB69 /* MainViewController.swift in Sources */,
 				926574BB2726A05A00E4BB69 /* AppCoordinator.swift in Sources */,
 				926574A527269F5D00E4BB69 /* AppDelegate.swift in Sources */,
-				926574C82726A3DE00E4BB69 /* Cooridinate.swift in Sources */,
 				926574A727269F5D00E4BB69 /* SceneDelegate.swift in Sources */,
 				926574C02726A25F00E4BB69 /* MainCooridinator.swift in Sources */,
 			);

@@ -7,8 +7,12 @@
 
 import UIKit
 
-class AppCoordinator: Coordinator, LoginCoordinatorDelegate {
+protocol Coordinator : AnyObject {
+    var childCoordinators : [Coordinator] { get set }
+    func start()
+}
 
+class AppCoordinator: Coordinator, LoginCoordinatorDelegate, MainCoordinatorDelegate {
     var childCoordinators: [Coordinator] = []
     private var navigationController: UINavigationController!
     
@@ -28,7 +32,9 @@ class AppCoordinator: Coordinator, LoginCoordinatorDelegate {
     
     private func showMainViewController() {
         let coordinator = MainCoordinator(navigationController: self.navigationController)
+        coordinator.delegate = self
         coordinator.start()
+        self.childCoordinators.append(coordinator)
     }
     
     private func showLoginViewController() {
@@ -42,5 +48,9 @@ class AppCoordinator: Coordinator, LoginCoordinatorDelegate {
         self.childCoordinators = self.childCoordinators.filter { $0 !== coordinator }
         self.showMainViewController()
     }
+    
+    func didLoggedOut(_ coordinator: MainCoordinator) {
+        self.childCoordinators = self.childCoordinators.filter { $0 !== coordinator }
+        self.showLoginViewController()
+    }
 }
-
