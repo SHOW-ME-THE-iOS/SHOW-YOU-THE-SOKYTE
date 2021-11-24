@@ -17,6 +17,8 @@
 		92AD6A62274DFFDD00CD7B74 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AD6A61274DFFDD00CD7B74 /* Factory.swift */; };
 		92AD6A64274E032600CD7B74 /* SportswareFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AD6A63274E032600CD7B74 /* SportswareFactory.swift */; };
 		92AD6A66274E0A8800CD7B74 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AD6A65274E0A8800CD7B74 /* Client.swift */; };
+		92AD6A71274E225F00CD7B74 /* ShapeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AD6A70274E225F00CD7B74 /* ShapeFactory.swift */; };
+		92AD6A73274E233200CD7B74 /* HelperViewFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AD6A72274E233200CD7B74 /* HelperViewFactoryProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		92AD6A61274DFFDD00CD7B74 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		92AD6A63274E032600CD7B74 /* SportswareFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportswareFactory.swift; sourceTree = "<group>"; };
 		92AD6A65274E0A8800CD7B74 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		92AD6A70274E225F00CD7B74 /* ShapeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeFactory.swift; sourceTree = "<group>"; };
+		92AD6A72274E233200CD7B74 /* HelperViewFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperViewFactoryProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 		9213DB71274D6EB400D8A0C8 /* FactoryPattern */ = {
 			isa = PBXGroup;
 			children = (
+				92AD6A6F274E225300CD7B74 /* Shape */,
 				92AD6A5E274DFECC00CD7B74 /* FactoryMethodPattern */,
 				9213DB72274D6EB400D8A0C8 /* AppDelegate.swift */,
 				9213DB74274D6EB400D8A0C8 /* SceneDelegate.swift */,
@@ -85,6 +90,15 @@
 				92AD6A65274E0A8800CD7B74 /* Client.swift */,
 			);
 			path = FactoryMethodPattern;
+			sourceTree = "<group>";
+		};
+		92AD6A6F274E225300CD7B74 /* Shape */ = {
+			isa = PBXGroup;
+			children = (
+				92AD6A70274E225F00CD7B74 /* ShapeFactory.swift */,
+				92AD6A72274E233200CD7B74 /* HelperViewFactoryProtocol.swift */,
+			);
+			path = Shape;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,9 +174,11 @@
 			files = (
 				9213DB77274D6EB400D8A0C8 /* ViewController.swift in Sources */,
 				92AD6A66274E0A8800CD7B74 /* Client.swift in Sources */,
+				92AD6A73274E233200CD7B74 /* HelperViewFactoryProtocol.swift in Sources */,
 				92AD6A60274DFEDB00CD7B74 /* Product.swift in Sources */,
 				9213DB73274D6EB400D8A0C8 /* AppDelegate.swift in Sources */,
 				9213DB75274D6EB400D8A0C8 /* SceneDelegate.swift in Sources */,
+				92AD6A71274E225F00CD7B74 /* ShapeFactory.swift in Sources */,
 				92AD6A64274E032600CD7B74 /* SportswareFactory.swift in Sources */,
 				92AD6A62274DFFDD00CD7B74 /* Factory.swift in Sources */,
 			);

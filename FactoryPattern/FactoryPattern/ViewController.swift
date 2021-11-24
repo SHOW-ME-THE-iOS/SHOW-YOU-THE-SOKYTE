@@ -11,8 +11,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let soKyte = Client(brand: .nike)
+        let _ = Client(brand: .nike)
+    }
+    
+    @IBAction func drawCircle(_ sender: Any) {
+        createShape(.circle, on: view)
+    }
+    
+    @IBAction func drawSquare(_ sender: Any) {
+        createShape(.square, on: view)
         
     }
+    
+    @IBAction func drawRectangle(_ sender: Any) {
+        let rectangle = getShape(.rectangle, on: view)
+        rectangle.display()
+    }
 }
-

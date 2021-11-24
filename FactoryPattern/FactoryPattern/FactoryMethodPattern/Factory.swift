@@ -27,7 +27,6 @@ class BrandShoseFactory: ShoseFactory {
     }
 }
 
-
 protocol TshirtFactory {
     func makeTshirt(brand: BrandType)
 }
